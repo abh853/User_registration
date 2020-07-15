@@ -1,10 +1,12 @@
 #!/bin/bash -x
 
-read -p "enter the first name > " fname
-if [[ $fname =~ ^([[:upper:]][[:lower:]]{2,})$ ]]
+read -p "enter the last name > " lname
+lnamepat="^[A-Z][a-z][a-z]+$";
+if [[ $lname =~ $lnamepat ]]
 then
-        echo "valid first name"
+  echo "Valid last name";
 else
-        echo "invalid first name"
+  echo "Invalid last name";
 fi
+
 
