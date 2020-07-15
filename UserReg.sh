@@ -1,12 +1,10 @@
 #!/bin/bash -x
-
-read -p "Enter Email id" email
-emailpat="^abc([\.-]?)[a-z0-9]*@[a-z]+\.[a-z]+(\.[a-z])*$";
-if [[ $email =~ $emailpat   ]]
+read -p "Enter the phone No:" PhoneNo
+PAT3="^(\+[0-9]{2}\s)[0-9]{10}$"
+if [[ $PhoneNo =~ $PAT3 ]]
 then
-  echo "Valid email address";
+	echo "Phone Number Is Valid";
 else
-  echo "Invalid email address";
-fi
-
+	echo "Phone Number Is Not Valid";
+fi 
 
